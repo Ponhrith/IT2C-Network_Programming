@@ -97,12 +97,7 @@ class ServerSocket(threading.Thread):
                 if message:
                     print('{} says {!r}'.format(self.sockname, message))
                     self.server.broadcast(message, self.sockname)
-                else: #no use, go to exception
-                    # Client has closed the socket, exit the thread
-                    print('{} has closed the connection'.format(self.sockname))
-                    self.sc.close()
-                    server.remove_connection(self)
-                    return
+                
             except socket.error as e:
                 print(e)
                 print('{} has closed the connection'.format(self.sockname))
