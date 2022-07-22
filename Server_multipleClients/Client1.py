@@ -77,3 +77,13 @@ class Client:
         self.sock.sendall('Server: {} has joined the chat. Say hi!'.format(name).encode('ascii'))
         print("\rAll set! Leave the chatroom anytime by typing 'QUIT'\n")
         print('{}: '.format(name), end = '')
+        
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Chatroom Server')
+    parser.add_argument('host', help='Interface the server listens at')
+    parser.add_argument('-p', metavar='PORT', type=int, default=1060,
+                        help='TCP port (default 1060)')
+    args = parser.parse_args()
+
+    client = Client(args.host, args.p)
+    client.start()
