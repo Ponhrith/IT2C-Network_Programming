@@ -11,7 +11,7 @@
             
             "program": "D:/Coding Projects/IT2C-Network_Programming/Server_multipleClients/Client1.py",
             "console": "integratedTerminal",
-            "args":["client","172.16.2.189"],
+            "args":["172.16.2.189", "-p 1060"],
             //"args":["server"],
             
 
