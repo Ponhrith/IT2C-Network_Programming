@@ -1,6 +1,6 @@
 # https://stackabuse.com/courses/graphs-in-python-theory-and-implementation/lessons/minimum-spanning-trees-prims-algorithm/#whatisaminimumspanningtree
 class Graph:
-    def __init__(self, num_of_nodes):
+    def __init__(self, num_of_nodes): #init is a constructor, self is this
         self.m_num_of_nodes = num_of_nodes
         # Initialize the adjacency matrix with zeros 
         self.m_graph = [[0 for column in range(num_of_nodes)] #why set to 0? # to show there is no connections
@@ -104,7 +104,7 @@ class Graph:
                 
                 
                 # Example graph has 9 nodes
-example_graph = Graph(9)
+example_graph = Graph(9) #9 is the parameter, it will send to num_of_nodes
                 
 example_graph.add_edge(0, 1, 4)
 example_graph.add_edge(0, 2, 7)
