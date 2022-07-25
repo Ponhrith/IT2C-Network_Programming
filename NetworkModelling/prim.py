@@ -7,33 +7,36 @@ class Graph:
                     for row in range(num_of_nodes)]
 
     def add_edge(self, node1, node2, weight):
-        self.m_graph[node1][node2] = weight #node 1 to 2 and node 2 to 1 have the same weight
-        self.m_graph[node2][node1] = weight
-        print("testing")
-
+        self.m_graph[node1][node2] = weight #0 to 1 =4
+        self.m_graph[node2][node1] = weight # vice versa
+        #print("testing")
+#----------------------------------------------------------------------------------
       
     def prims_mst(self):
         # Defining a really big number, that'll always be the highest weight in comparisons
-        postitive_inf = float('inf') #inf? #act as the temporary high number so the first node will find it lesser
+        postitive_inf = float('inf') #inf? #act as the temporary high number so the first node will find it lesser, so it can start the first node
+        #print(postitive_inf)???
+        #print('inf')??????
         #positive_inf, numbers are guaranteed to be below 10-setting the temporary value at 10 would been technically as valid
-        print("lorem ipsum") #testing
+        #print("lorem ipsum") #testing
         
         # This is a list showing which nodes are already selected 
         # so we don't pick the same node twice and we can actually know when stop looking
-        selected_nodes = [False for node in range(self.m_num_of_nodes)] # every column in this comprehension list represents a node
-
+        selected_nodes = [False for node in range(self.m_num_of_nodes)] #true for what it was selected, every column in this comprehension list represents a node
+        print(selected_nodes)
         # Matrix of the resulting MST
-        result = [[0 for column in range(self.m_num_of_nodes)] 
+        result = [[0 for column in range(self.m_num_of_nodes)] #when the same node
                     for row in range(self.m_num_of_nodes)]
-        
+        print(result)
         indx = 0
+        print(self.m_num_of_nodes)
         for i in range(self.m_num_of_nodes):
             print(self.m_graph[i])
         
         print(selected_nodes)
 
         # While there are nodes that are not included in the MST, keep looking:
-        while(False in selected_nodes):
+        while(False in selected_nodes): #keep doing this until there's no false, all is true means all is connected
             # We use the big number we created before as the possible minimum weight
             minimum = postitive_inf
 
@@ -54,9 +57,9 @@ class Graph:
                         # If the analyzed node have a path to the ending node AND its not included in the MST (to avoid cycles)
                         if (not selected_nodes[j] and self.m_graph[i][j]>0):  
                             # If the weight path analized is less than the minimum of the MST
-                            if self.m_graph[i][j] < minimum:
+                            if self.m_graph[i][j] < minimum: 
                                 # Defines the new minimum weight, the starting vertex and the ending vertex
-                                minimum = self.m_graph[i][j]
+                                minimum = self.m_graph[i][j] 
                                 start, end = i, j 
                                 #start is the first randomly selected node
                                 #end is the last node we add to the MST
@@ -89,7 +92,7 @@ class Graph:
                     print("%d - %d: %d" % (i, j, result[i][j]))       
         # the weight in the (i, j) position of the adjency matrix must be greater than zero
         # the vertex j must not be selected (if it's already selected this can lead to a cycle)        
-                
+#---------------------------------------------------------------------------------------------------             
 
 #Given these two conditions, you can compare the edge weight of a given relationship with the general minimum
 # of the MST. If the weight is less than the minimum, then it will become the new minimum, and the variables start and end
