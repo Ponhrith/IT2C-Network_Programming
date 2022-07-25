@@ -9,9 +9,9 @@
             "type": "python",
             "request": "launch",
             
-            "program": "D:/Coding Projects/IT2C-Network_Programming/Server_multipleClients/Server1.py",
+            "program": "D:/Coding Projects/IT2C-Network_Programming/Server_multipleClients/Client1.py",
             "console": "integratedTerminal",
-            "args":["172.16.2.189", "-p 1060"],
+            "args":["172.16.2.76", "-p 1060"],
             //"args":["server"],
             
 
