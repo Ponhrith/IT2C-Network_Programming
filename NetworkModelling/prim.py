@@ -28,7 +28,7 @@ class Graph:
         result = [[0 for column in range(self.m_num_of_nodes)] #when the same node
                     for row in range(self.m_num_of_nodes)]
         print(result)
-        indx = 0
+        indx = 0 #?
         print(self.m_num_of_nodes)
         for i in range(self.m_num_of_nodes):
             print(self.m_graph[i])
