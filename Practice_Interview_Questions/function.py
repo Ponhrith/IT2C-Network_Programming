@@ -4,5 +4,6 @@ def calc_age():
     print(f"Age: {age}")
     
 print("Name: John Smith")
+calc_age()
 print("Job: Programmer")
     
