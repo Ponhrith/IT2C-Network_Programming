@@ -13,13 +13,13 @@ while True:
         print("Car Drifted")
     elif command == "help":
         print("""
-              Start: To Start the Car
-              Stop: To Stop the Car
-              Left: To Turn the Car to the Left
-              Right: To Turn the Car to the Right
-              Drift: To Drift the Car
-              Exit: to Quit the Game
-              """)
+Start: To Start the Car
+Stop: To Stop the Car
+Left: To Turn the Car to the Left
+Right: To Turn the Car to the Right
+Drift: To Drift the Car
+Exit: to Quit the Game
+                    """)
     elif command == "exit":
         break
     else:
