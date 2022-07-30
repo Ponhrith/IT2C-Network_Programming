@@ -1,9 +1,9 @@
-def calc_age():
-    birth_year = 1998
-    age = 2020 - birth_year
+def calc_age(birth_year, current_year):
+    
+    age = current_year - birth_year
     print(f"Age: {age}")
     
-print("Name: John Smith")
-calc_age()
-print("Job: Programmer")
+
+calc_age(2001, 2022)
+
     
