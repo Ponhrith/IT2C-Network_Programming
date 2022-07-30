@@ -1,17 +1,17 @@
 while True:
-    command = input("Type a Command: ")
+    command = input("Type a Command: ").lower()
     
-    if command.lower() == 'start':
+    if command == 'start':
         print("Car Started")
-    elif command.lower() == "stop":
+    elif command == "stop":
         print("Car Stopped")
-    elif command.lower() == "left":
+    elif command == "left":
         print("Car Turned to the Left")
-    elif command.lower() == "right":
+    elif command == "right":
         print("Cara Turned to the Right")
-    elif command.lower() == "drift":
+    elif command == "drift":
         print("Car Drifted")
-    elif command.lower() == "help":
+    elif command == "help":
         print("""
               Start: To Start the Car
               Stop: To Stop the Car
@@ -20,7 +20,7 @@ while True:
               Drift: To Drift the Car
               Exit: to Quit the Game
               """)
-    elif command.lower()== "exit":
+    elif command == "exit":
         break
     else:
         print("Unknown Command\nType 'help' for a List of Commands")
