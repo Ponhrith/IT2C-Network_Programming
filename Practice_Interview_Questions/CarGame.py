@@ -1,16 +1,37 @@
+car_started = False
+
+
+
 while True:
     command = input("Type a Command: ").lower()
     
     if command == 'start':
-        print("Car Started")
+        if car_started == True:
+            print("Car is already started")
+        else:
+            print("Car Started")
+            car_started = True
     elif command == "stop":
-        print("Car Stopped")
+        if car_started == True:
+            print("Car Stopped")
+            car_started = False
+        else:
+            print("Car is already stopped")
     elif command == "left":
-        print("Car Turned to the Left")
+        if car_started == True:
+            print("Car Turned to the Left")
+        else:
+            print("Car isn't even started")
     elif command == "right":
-        print("Cara Turned to the Right")
+        if car_started == True:
+            print("Car Turned to the Right")
+        else:
+            print("Car isn't even started")
     elif command == "drift":
-        print("Car Drifted")
+        if car_started == True:
+            print("Car Drifted")
+        else:
+            print("Car isn't even started")
     elif command == "help":
         print("""
 Start: To Start the Car
